@@ -12,7 +12,13 @@ window.addEventListener('load', function() {
 	document.querySelector("#novaBarva") 
 		.addEventListener('click', dodajBarvo);
 		
-	//Odstrani barve
+		
+		
+	var barveStran = function(event){
+	document.querySelector("#barve").innerHTML = "";
+
+	}
+	document.querySelector("#odstraniBarve").addEventListener('click',barveStran);
 	
 	//Stroboskop
 	var vrednosti = [];
@@ -57,3 +63,9 @@ window.addEventListener('load', function() {
 	document.querySelector("#start").addEventListener('click', zagon);
 	
 });
+
+var odstraniBarve = function(event){
+	document.querySelector("#barve").innerHTML += "";
+
+}
+document.querySelector("#odstraniBarve").addEventListener('click',odstraniBarve);
