@@ -40,6 +40,10 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		var start = document.querySelector("#start");
+		start.innerHTML = "Zaženi stroboskop";
+		start.removeEventListener('click', stop);
+		start.addEventListener('click', zagon);
 	}
 	
 	var zagon = function(event) {
@@ -64,8 +68,3 @@ window.addEventListener('load', function() {
 	
 });
 
-var odstraniBarve = function(event){
-	document.querySelector("#barve").innerHTML += "";
-
-}
-document.querySelector("#odstraniBarve").addEventListener('click',odstraniBarve);
